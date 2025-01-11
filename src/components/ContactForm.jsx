@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-const AboutUs = () => {
+const ContactForm = () => {
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100 rounded-xl ">
+    <div className="flex justify-center items-center bg-gray-100">
       <form className="bg-white p-8 rounded shadow-md w-full max-w-sm">
         <h2 className="text-2xl font-bold mb-6 text-center">Contact Us</h2>
         
@@ -55,4 +55,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs
+export default ContactForm;
