@@ -1,8 +1,14 @@
 import React from 'react';
 import ReasonsCard from '../components/props/ReasonsCard';
 import FAQ from '../components/FAQ';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const Home = () => {
+  
+  const navigate = useNavigate();
+
   return (
     <main>
       <section className="bg-[url('/images/Hero-image.png')] bg-cover bg-no-repeat bg-center px-10 h-50">
@@ -15,9 +21,9 @@ const Home = () => {
             Find detailed information about any book you love.
           </p>
           <br />
-          <input className="content-center" type="text" />
-          <br />
-          <button className="bg-s1 py-1.5 px-5 rounded my-2 content-center">Browse Now</button>
+          
+          <button className="bg-s1 py-1.5 px-5 rounded my-2 content-center" onClick={() => navigate('/search')}>Search now</button>
+          
         </div>
       </section>
 
@@ -46,7 +52,7 @@ const Home = () => {
                 <h6 className="p-5 h5 text-center">Fiction</h6>
               </div>
               <div>
-                <button className="bg-s1 py-1.5 px-5 rounded my-2 mt-10">Explore Now</button>
+                <button className="bg-s1 py-1.5 px-5 rounded my-2 content-center" onClick={() => navigate('/search')}>Search now</button>
               </div>
             </div>
           </div>
@@ -58,7 +64,7 @@ const Home = () => {
                 <h6 className="p-5 h5 text-center">Non Fiction</h6>
               </div>
               <div>
-                <button className="bg-s1 py-1.5 px-5 rounded my-2 mt-10">Explore Now</button>
+                <button className="bg-s1 py-1.5 px-5 rounded my-2 content-center" onClick={() => navigate('/search')}>Search now</button>
               </div>
             </div>
           </div>
@@ -70,7 +76,7 @@ const Home = () => {
                 <h6 className="p-5 h5 text-center">History</h6>
               </div>
               <div>
-                <button className="bg-s1 py-1.5 px-5 rounded my-2 mt-10">Explore Now</button>
+               <button className="bg-s1 py-1.5 px-5 rounded my-2 content-center" onClick={() => navigate('/search')}>Search now</button>
               </div>
             </div>
           </div>
@@ -82,7 +88,7 @@ const Home = () => {
                 <h6 className="p-5 h5 text-center">Science</h6>
               </div>
               <div>
-                <button className="bg-s1 py-1.5 px-5 rounded my-2 mt-10">Explore Now</button>
+              <button className="bg-s1 py-1.5 px-5 rounded my-2 content-center" onClick={() => navigate('/search')}>Search now</button>
               </div>
             </div>
           </div>
@@ -119,7 +125,7 @@ const Home = () => {
           <br />
           <p className="base text-center font-poppins text-white">Create a free Account and have the liberty to save, track, and comment on Books that Spark your Interests.</p>
           <br />
-          <button className="bg-s1 py-1.5 px-5 rounded my-2 content-center">Browse Now</button>
+          <button className="bg-s1 py-1.5 px-5 rounded my-2 content-center" onClick={() => navigate('/search')}>Search now</button>
           <img src="/images/open.png" alt="OpenBook" />
         </div>
       </section>

@@ -7,7 +7,7 @@ const MainLayout = () => {
     <div>
         <div className='bg-white shadow-500 sticky top-0 z-50'>
         <header className='flex gap-5 flex-col md:flex-row items-center container  justify-between py-5 '>
-            <img src="public\images\Logo.png" alt="logo" />
+            <img src="\images\Logo.png" alt="logo" />
             <nav className='flex gap-10'>
                 <NavLink to='/' >Home</NavLink>
                 <NavLink to='search' >Search</NavLink>

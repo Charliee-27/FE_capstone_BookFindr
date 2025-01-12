@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchBar from '../components/SearchBar';
 
 const Search = () => {
   return (
@@ -10,14 +11,13 @@ const Search = () => {
       </section>
 
       <section>
-        <div className="flex flex-col justify-center items-center py-10">
-          <input className="border-4" type="text" />
-          <br />
-          <button className="bg-s1 py-1.5 px-5 rounded my-2 mt-5">Search</button>
-        </div>
+       <SearchBar />
       </section>
     </main>
   );
 }
+
+
+
 
 export default Search;
