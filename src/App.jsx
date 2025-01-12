@@ -1,3 +1,4 @@
+import Footer from "./components/Footer"
 import Newsletter from "./components/Newsletter"
 import AboutUs from "./pages/AboutUs"
 import ContactUs from "./pages/ContactUs"
@@ -9,6 +10,8 @@ export default function App() {
   return (
     < div className="">
       <ContactUs />
+      <Footer />
+      <Home />
     </div>
   )
 }
