@@ -38,7 +38,7 @@ const Home = () => {
         <div className="pb-5 h5 text-center">
           <p className="h4">Explore Our <strong>Categories</strong></p>
         </div>
-        <div className="flex flex-row justify-center gap-5 container">
+        <div className="flex flex-col sm:flex-row justify-center gap-5 container">
           <div className="basis-1/4 shadow-xl rounded-xl flex items-center bg-white">
             <div className="rounded-xl py-5 px-5 flex flex-col items-center bg-white">
               <div>
