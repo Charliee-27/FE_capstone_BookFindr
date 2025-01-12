@@ -4,15 +4,14 @@ const Accordion = ({ title, answer }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
-    <div className="py-5 border-b-2">
+    <div className="py-5 border-b-2 border-gray-300">
       <button
         onClick={() => setAccordionOpen(!accordionOpen)}
-        className="flex justify-between w-full"
+        className="flex justify-between w-full text-left"
       >
-        <span>{title}</span>
-        {/* {accordionOpen ? <span>-</span> : <span>+</span>} */}
+        <span className="font-semibold text-gray-700">{title}</span>
         <svg
-          className="fill-slate-500 shrink-0 ml-8"
+          className="fill-gray-500 shrink-0 ml-8"
           width="16"
           height="16"
           xmlns="http://www.w3.org/2000/svg"
@@ -38,13 +37,11 @@ const Accordion = ({ title, answer }) => {
         </svg>
       </button>
       <div
-        className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-600 text-sm ${
-          accordionOpen
-            ? "grid-rows-[1fr] opacity-100"
-            : "grid-rows-[0fr] opacity-0"
+        className={`grid overflow-hidden transition-all duration-300 ease-in-out text-gray-600 text-sm ${
+          accordionOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="overflow-hidden">{answer}</div>
+        <div className="overflow-hidden pt-2">{answer}</div>
       </div>
     </div>
   );

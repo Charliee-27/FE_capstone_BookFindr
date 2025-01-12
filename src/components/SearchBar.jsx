@@ -36,37 +36,37 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="container mx-auto my-auto p-4">
-      <form onSubmit={handleSearch} className="mb-4">
+    <div className="container mx-auto my-8 p-4">
+      <form onSubmit={handleSearch} className="mb-4 flex flex-wrap gap-4">
         <input
           type="text"
           placeholder="Search by keyword"
           value={searchQuery.keyword}
           onChange={(e) => setSearchQuery({ ...searchQuery, keyword: e.target.value })}
-          className="border px-4 py-2 mr-2"
+          className="border px-4 py-2 w-full md:w-auto"
         />
         <input
           type="text"
           placeholder="Search by author name"
           value={searchQuery.author}
           onChange={(e) => setSearchQuery({ ...searchQuery, author: e.target.value })}
-          className="border px-4 py-2 mr-2"
+          className="border px-4 py-2 w-full md:w-auto"
         />
         <input
           type="text"
           placeholder="Search by book title"
           value={searchQuery.title}
           onChange={(e) => setSearchQuery({ ...searchQuery, title: e.target.value })}
-          className="border px-4 py-2 mr-2"
+          className="border px-4 py-2 w-full md:w-auto"
         />
         <input
           type="text"
           placeholder="Search by ISBN"
           value={searchQuery.isbn}
           onChange={(e) => setSearchQuery({ ...searchQuery, isbn: e.target.value })}
-          className="border px-4 py-2 mr-2"
+          className="border px-4 py-2 w-full md:w-auto"
         />
-        <button className="bg-blue-500 text-white px-4 py-2 rounded-md">
+        <button className="bg-s1  text-p1 px-4 py-2 rounded-md w-full md:w-auto">
           Search Books
         </button>
       </form>
@@ -77,6 +77,7 @@ const SearchBar = () => {
         {books.map((book, index) => (
           <BookCard
             key={book.key}
+            index={index}
             coverImage={book.coverImage}
             title={book.title}
             author={book.author}

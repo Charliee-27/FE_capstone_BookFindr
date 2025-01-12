@@ -3,27 +3,22 @@ import ReasonsCard from '../components/props/ReasonsCard';
 import FAQ from '../components/FAQ';
 import { useNavigate } from 'react-router-dom';
 
-
-
 const Home = () => {
-  
   const navigate = useNavigate();
 
   return (
     <main>
-      <section className="bg-[url('/images/Hero-image.png')] bg-cover bg-no-repeat bg-center px-10 h-50">
+      <section className="bg-[url('/images/Hero-image.png')] bg-cover bg-no-repeat bg-center h-50">
         <div className="content-center place-items-center py-20 container">
-          <h1 className="h1 text-center font-poppins text-white">Discover Your Next Favorite Book</h1>
+          <h1 className="h1 text-center text-white">Discover Your Next Favorite Book</h1>
           <br />
-          <p className="body-3 text-center font-poppins text-white">
+          <p className="body-3 text-center text-white">
             Search, explore, and dive into the world of books with ease.
             <br />
             Find detailed information about any book you love.
           </p>
           <br />
-          
-          <button className="bg-s1 py-1.5 px-5 rounded my-2 content-center" onClick={() => navigate('/search')}>Search now</button>
-          
+          <button className="bg-s1 py-1.5 px-5 rounded my-2" onClick={() => navigate('/search')}>Search now</button>
         </div>
       </section>
 
@@ -33,7 +28,7 @@ const Home = () => {
             <strong>Reasons</strong> for Choosing Us
           </p>
         </div>
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-col md:flex-row gap-5">
           <ReasonsCard title="Search for Books" body="Find books by title, author, or keyword with a powerful search engine connected to the Open Library." />
           <ReasonsCard title="View Detailed Information" body="Get in-depth details about books, including descriptions, authors, publication dates, and more." />
           <ReasonsCard title="Enjoy a Responsive UI" body="Experience a clean, modern design that works seamlessly across all your devices." />
@@ -52,7 +47,7 @@ const Home = () => {
                 <h6 className="p-5 h5 text-center">Fiction</h6>
               </div>
               <div>
-                <button className="bg-s1 py-1.5 px-5 rounded my-2 content-center" onClick={() => navigate('/search')}>Search now</button>
+                <button className="bg-s1 py-1.5 px-5 rounded my-2" onClick={() => navigate('/search')}>Search now</button>
               </div>
             </div>
           </div>
@@ -64,7 +59,7 @@ const Home = () => {
                 <h6 className="p-5 h5 text-center">Non Fiction</h6>
               </div>
               <div>
-                <button className="bg-s1 py-1.5 px-5 rounded my-2 content-center" onClick={() => navigate('/search')}>Search now</button>
+                <button className="bg-s1 py-1.5 px-5 rounded my-2" onClick={() => navigate('/search')}>Search now</button>
               </div>
             </div>
           </div>
@@ -76,7 +71,7 @@ const Home = () => {
                 <h6 className="p-5 h5 text-center">History</h6>
               </div>
               <div>
-               <button className="bg-s1 py-1.5 px-5 rounded my-2 content-center" onClick={() => navigate('/search')}>Search now</button>
+                <button className="bg-s1 py-1.5 px-5 rounded my-2" onClick={() => navigate('/search')}>Search now</button>
               </div>
             </div>
           </div>
@@ -88,7 +83,7 @@ const Home = () => {
                 <h6 className="p-5 h5 text-center">Science</h6>
               </div>
               <div>
-              <button className="bg-s1 py-1.5 px-5 rounded my-2 content-center" onClick={() => navigate('/search')}>Search now</button>
+                <button className="bg-s1 py-1.5 px-5 rounded my-2" onClick={() => navigate('/search')}>Search now</button>
               </div>
             </div>
           </div>
@@ -98,7 +93,7 @@ const Home = () => {
       <section>
         <div className="bg-[url('/images/Testimonial-bg.png')] bg-cover bg-no-repeat bg-center">
           <div className="container place-items-center py-20">
-            <div className="bg-black p-5 size-64 rounded-xl ml-auto my">
+            <div className="bg-black p-5 size-64 rounded-xl my">
               <h5 className="text-s1 h5">Mr Cat Willy</h5>
               <p className="text-white pt-5 base">
                 BookFindr has helped me find some out of this world books and its high-end functionality has impacted hugely positive to my reading experience.
@@ -110,22 +105,20 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
-        <div className="bg-white py-10">
-          <h4 className="h4 text-center">FAQs frequently asked questions</h4>
-          <div className="container">
-            <FAQ />
-          </div>
+      <section className="bg-white py-10">
+        <h4 className="h4 text-center">FAQs frequently asked questions</h4>
+        <div className="container">
+          <FAQ />
         </div>
       </section>
 
       <section className="bg-[url('/images/CTA-bg.png')] bg-cover bg-no-repeat bg-center">
         <div className="content-center place-items-center py-20 container">
-          <h3 className="h3 text-center font-poppins text-white">Ready to start Reading</h3>
+          <h3 className="h3 text-center text-white">Ready to start Reading</h3>
           <br />
-          <p className="base text-center font-poppins text-white">Create a free Account and have the liberty to save, track, and comment on Books that Spark your Interests.</p>
+          <p className="base text-center text-white">Create a free Account and have the liberty to save, track, and comment on Books that Spark your Interests.</p>
           <br />
-          <button className="bg-s1 py-1.5 px-5 rounded my-2 content-center" onClick={() => navigate('/search')}>Search now</button>
+          <button className="bg-s1 py-1.5 px-5 rounded my-2" onClick={() => navigate('/search')}>Search now</button>
           <img src="/images/open.png" alt="OpenBook" />
         </div>
       </section>
